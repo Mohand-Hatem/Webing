@@ -1,0 +1,6 @@
+#19c8fa #0f6285
+#0f425e #0c3c57 dark blue
+#cc7543 #b74e06 brwon
+#eeeeee lay offwhite
+#777 dark gray
+#aaa white gray
