@@ -1,0 +1,656 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --sec-color: #3f5a5c;
+  --main-color: #647c90;
+  --other-color: #5c4f3f;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Main-Title */
+.Big-title {
+  color: var(--sec-color);
+  width: 200px;
+  text-align: center;
+  padding: 60px 0;
+  margin: auto;
+  font-size: 25px;
+  position: relative;
+}
+.Big-title h2 {
+  transition: 0.5s;
+}
+.Big-title h2:hover {
+  transform: translateY(3px);
+}
+.Big-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  background-color: var(--main-color);
+  z-index: 2;
+}
+.Big-title::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 6%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--main-color);
+  background-color: white;
+  z-index: 3;
+  animation-name: swap;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swap {
+  0% {
+    left: 6%;
+  }
+  100% {
+    left: 94%;
+  }
+}
+
+/* Start Design */
+
+/* Start Header */
+header {
+  padding-top: 10px;
+}
+header .container {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .container .logo {
+  flex: 0.8;
+}
+
+header .container .login {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+header .container .login i {
+  font-size: 25px;
+  color: #1e2e2b;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container nav {
+  flex: 3;
+}
+header .container nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .container nav ul li a {
+  color: var(--other-color);
+  position: relative;
+  z-index: 3;
+}
+header .container nav ul li {
+  padding: 7px 20px;
+  transition: 0.5s;
+  position: relative;
+  font-weight: bold;
+  border: 2px solid #647c90;
+  cursor: pointer;
+}
+
+header .container nav ul li::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% - 12px);
+  background-color: white;
+  left: -3px;
+  top: 6px;
+  transform: scaleY(1);
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+header .container nav ul li:hover::before {
+  transform: scaleY(0);
+}
+header .container nav ul li::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 12px);
+  height: calc(100% + 6px);
+  background-color: white;
+  left: 6px;
+  top: -3px;
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+header .container nav ul li:hover::after {
+  transform: scaleX(0);
+}
+/* ///////////// Mega Menu */
+
+header .container nav ul li .Mega {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  justify-content: space-between;
+  background-color: white;
+  position: absolute;
+  left: 135%;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+  padding: 10px;
+  opacity: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: default;
+}
+header .container nav ul li .Mega .chair {
+  flex: 1;
+  overflow: hidden;
+}
+header .container nav ul li .Mega .chair img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+header .container nav ul li .Mega .chair img:hover {
+  transform: scale(1.2);
+}
+header .container nav ul li .Mega .link {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .container nav ul li .Mega .link > div {
+  display: flex;
+  gap: 5px;
+  padding: 10px 0;
+  transition: 0.5s;
+  transform: scale(1);
+  cursor: pointer;
+  flex-basis: 25%;
+}
+header .container nav ul li .Mega .link > div:hover {
+  transform: scale(1.02);
+}
+header .container nav ul li .Mega .link > div:hover p {
+  color: var(--main-color);
+}
+
+header .container nav ul li .Mega .link > div p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--other-color);
+}
+header .container nav ul li .Mega .link > div i {
+  font-size: 17px;
+  color: var(--sec-color);
+  text-align: center;
+}
+
+header .container nav ul li:hover .Mega {
+  z-index: 3;
+  opacity: 1;
+  left: 135%;
+  top: 170%;
+  transform: translate(-50%, 0%);
+}
+/* //////////// */
+header .container .logo h1 {
+  color: var(--main-color);
+  padding: 10px 0px;
+  font-size: 35px;
+  text-align: center;
+}
+header .container .login > i {
+  color: var(--sec-color);
+}
+header .container .login .bag i {
+  margin-right: 15px;
+  color: var(--sec-color);
+}
+
+header .container .login .bag {
+  position: relative;
+}
+
+header .container .login .bag::before {
+  content: "0";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  text-align: center;
+  left: 26px;
+  top: 15px;
+  font-size: 15px;
+  line-height: 20px;
+  color: white;
+}
+
+/* End header */
+
+/* Start Layout */
+main .container {
+  background-image: url(../Images/vecteezy_modern-cozy-living-room-with-blue-wall-background-ai-generated_24354831_363.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: right -300px;
+  position: relative;
+  object-fit: cover;
+}
+main .container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 30%);
+}
+main .container button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 10px 20px;
+  color: white;
+  font-size: 32px;
+  z-index: 20;
+  cursor: pointer;
+  border: 2px solid #647c90;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 60px 10px #647c90;
+  transition: 0.5s;
+}
+main .container button:hover {
+  box-shadow: #647c90 0px 0px 25px 2px inset;
+  letter-spacing: 3px;
+}
+
+/* End Layout */
+@media (max-width: 992px) {
+  header .container nav ul li .Mega {
+    left: -50%;
+  }
+  header .container nav ul li:hover .Mega {
+    left: -50%;
+  }
+  header .container .logo {
+    flex: 0 1 50%;
+    order: 1;
+  }
+  header .container .logo h1 {
+    font-size: 40px;
+  }
+  header .container .login {
+    flex: 0 1 50%;
+    order: 2;
+  }
+  header .container nav {
+    flex: 0 0 100%;
+    order: 3;
+    margin: 10px 0;
+  }
+  main .container button {
+    top: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  header .container nav ul li .Mega {
+    width: 200px;
+    left: 50%;
+  }
+  header .container nav ul li:hover .Mega {
+    left: 50%;
+  }
+  header .container {
+    justify-content: center;
+  }
+  header .container nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  header .container nav ul li {
+    margin: 10px;
+  }
+  header .container .login {
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+/* Start Section */
+section .container {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--other-color);
+}
+section .container .slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section .container .slider > div {
+  flex: 1;
+  padding: 7px;
+  position: relative;
+}
+@media (max-width: 992px) {
+  section .container .slider > div {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 600px) {
+  section .container .slider > div {
+    flex: 0 0 100%;
+  }
+}
+
+section .container .slider .image img {
+  width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+section .container .slider .text {
+  padding: 10px 5px;
+}
+section .container .slider .text p {
+  color: var(--other-color);
+  font-style: italic;
+}
+section .container .slider .text h3 {
+  color: var(--sec-color);
+}
+section .container .slider > div::before {
+  content: ">";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  right: 7px;
+  bottom: 20px;
+  background-color: var(--main-color);
+  opacity: 0;
+}
+section .container .slider > div:hover::before {
+  opacity: 1;
+}
+
+section .container .info {
+  display: flex;
+  padding: 20px 0px;
+}
+section .container .info .talk {
+  flex: 2;
+  border-bottom: 2px solid var(--other-color);
+}
+section .container .info .pho1,
+section .container .info .pho2 {
+  flex: 1;
+  position: relative;
+}
+
+section .container .info .pho1 {
+  margin: 0 14px;
+  background-image: url(../Images/3.jpg);
+  background-size: cover;
+}
+section .container .info .pho2 {
+  background-image: url(../Images/vecteezy_modern-cozy-living-room-with-blue-wall-background-ai-generated_24354831_363.jpg);
+  background-size: cover;
+}
+section .container .info .pho1,
+section .container .info .pho2 {
+  min-height: 350px;
+  transition: 0.5s;
+}
+section .container .info .pho1 .nx,
+section .container .info .pho2 .nx {
+  padding: 15px;
+}
+section .container .info .pho1 p,
+section .container .info .pho2 p {
+  color: #fcfaf0;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+section .container .info .pho1 h3,
+section .container .info .pho2 h3 {
+  color: #418cc9;
+  font-size: 22px;
+}
+
+section .container .info .talk .icon {
+  display: flex;
+  padding: 5px 0px;
+}
+section .container .info .talk .icon i {
+  font-size: 40px;
+  color: var(--sec-color);
+}
+section .container .info .talk .icon .Be {
+  padding: 0 10px;
+}
+section .container .info .talk .icon .Be h3 {
+  color: var(--sec-color);
+  font-size: 25px;
+}
+section .container .info .talk .icon .Be p {
+  color: var(--other-color);
+}
+section .container .info .talk .simple {
+  padding: 5px 0;
+}
+section .container .info .talk .simple p {
+  line-height: 2;
+  color: var(--other-color);
+}
+section .container .info .pho1:hover,
+section .container .info .pho2:hover {
+  transform: scale(1.06);
+}
+
+section .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+section .container .content .group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+section .container .content .part1,
+section .container .content .part2,
+section .container .content .part3,
+section .container .content .part4 {
+  border-right: 1px solid var(--other-color);
+}
+section .container .content .group .con {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+section .container .content .group .con i {
+  font-size: 32px;
+  position: absolute;
+}
+section .container .content .group .con .over {
+  color: #5d8284a8;
+  transition: 0.5s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section .container .content .group .con .set {
+  color: var(--sec-color);
+  transition: 0.5s;
+  left: 50%;
+  top: 200%;
+  transform: translate(-50%, -50%);
+}
+section .container .content .group:hover .over {
+  left: 50%;
+  top: -100%;
+  transform: translate(-50%, -50%);
+}
+section .container .content .group:hover .set {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section .container .content .group p {
+  font-size: 15px;
+  padding-top: 5px;
+  color: var(--main-color);
+}
+section .container .content .group h4 {
+  color: var(--other-color);
+  font-size: 17px;
+}
+section .container .content .group:hover h4 {
+  color: var(--sec-color);
+}
+section .container .content .group:hover p {
+  color: var(--other-color);
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  section .container .info .talk {
+    flex: 0 0 50%;
+  }
+  section .container .info {
+    align-items: center;
+  }
+  section .container .info .pho1 {
+    flex: 0 0 50%;
+  }
+  section .container .info .pho2 {
+    flex: 0 0 0;
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  section .container .info .pho1,
+  section .container .info .pho2 {
+    margin: 20px auto;
+    width: 70%;
+  }
+  section .container .info {
+    flex-direction: column;
+  }
+  section .container .info > div {
+    padding: 10px;
+  }
+}
+
+/* End Section */
+
+/* Start Footer  */
+footer .container .wizz {
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .wizz h5 {
+  color: var(--other-color);
+  font-size: 15px;
+  padding: 0px 10px;
+}
+footer .container .finish {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px;
+  margin-top: 50px;
+}
+footer .container .finish .item .land > img {
+  max-width: 100%;
+}
+footer .container .finish .item .land {
+  position: relative;
+}
+footer .container .finish .item .land .top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .finish .item:hover .top {
+  transform: scaleX(1);
+}
+footer .container .finish .item .land .top img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+footer .container .finish .item .land .top .social {
+  position: absolute;
+}
+footer .container .finish .item .land .top .social i {
+  font-size: 35px;
+  color: white;
+  padding: 5px;
+}
+footer .container .finish .item .star i:not(:last-child) {
+  color: #8d6431;
+}
+footer .container .finish .item .sand h4 {
+  color: var(--sec-color);
+  font-size: 22px;
+}
