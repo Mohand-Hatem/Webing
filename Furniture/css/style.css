@@ -567,9 +567,6 @@ section .container .content .group:hover p {
   section .container .info .talk {
     flex: 0 0 50%;
   }
-  section .container .info {
-    align-items: center;
-  }
   section .container .info .pho1 {
     flex: 0 0 50%;
   }
