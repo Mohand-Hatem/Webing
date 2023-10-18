@@ -444,7 +444,6 @@ section .container .info .pho2 {
 }
 section .container .info .pho1,
 section .container .info .pho2 {
-  min-height: 350px;
   transition: 0.5s;
 }
 section .container .info .pho1 .nx,
@@ -564,9 +563,13 @@ section .container .content .group:hover p {
 }
 
 @media (min-width: 601px) and (max-width: 992px) {
+  section .container .info {
+    justify-content: space-between;
+  }
+
   section .container .info .talk {
     flex: 0 0 50%;
-    max-height: 300px;
+    height: 390px;
     overflow: hidden;
   }
   section .container .info .pho1 {
@@ -582,6 +585,7 @@ section .container .content .group:hover p {
   section .container .info .pho1,
   section .container .info .pho2 {
     margin: 20px auto;
+    min-height: 350px;
     width: 70%;
   }
   section .container .info {
