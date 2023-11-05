@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* /////////NAV/ */
+nav {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 0.8;
+}
+.ling {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.topover {
+  z-index: 1100 !important;
+  margin-top: 50px;
+}
+nav li.nav-item a {
+  color: #777;
+  font-size: 20px !important;
+}
+.droping {
+  border-radius: 7px !important;
+  background-color: #f6f6f6b9;
+  padding: 10px;
+}
+.droping a {
+  font-weight: bold;
+}
+nav .log {
+  transition: 0.3s;
+}
+nav .log:hover {
+  transform: scale(1.08) rotate(5deg);
+}
+nav .ling:hover {
+  text-shadow: 0px 0px 35px #a098ee;
+}
+nav li a {
+  font-size: 18px !important;
+}
+
+.carousel-item img {
+  max-height: calc(100vh - 86px) !important;
+}
+.carousel-caption {
+  background-color: #00dade4b;
+  z-index: 20;
+  border-radius: 5px;
+}
+.carousel-indicators {
+  z-index: 30;
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.bf {
+  background-image: url("../images/vecteezy_many-small-jellyfish-aurelia-aurita-in-sea-illustration-ai_24542511_541.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+}
+.bf2 {
+  background-image: url("../images/vecteezy_a-large-sea-turtle-swimming-underwater-in-a-tropical-reef_28731873_916.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+}
+.bf2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.bf::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.fizz {
+  min-height: 350px !important;
+}
+
+.con-fizz .card {
+  width: 25rem !important;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+.con-fizz .card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  background-color: #00dade31;
+  transition: 1s;
+}
+.con-fizz .card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: #00dade31;
+  transition: 1s;
+}
+
+.con-fizz .card:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.con-fizz .card:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.conover {
+  padding: 0px !important;
+  position: relative;
+  transition: 0.3s;
+  max-width: 380px;
+  overflow: hidden;
+}
+.conover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(79, 89, 95, 0.637);
+}
+.conover:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+}
+.conover:hover::before {
+  background-color: rgba(39, 79, 121, 0.705);
+}
+.conover .img {
+  width: 100% !important;
+}
+.simg {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #00dbde;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.simg img {
+  width: 140%;
+  height: 140%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.conover .simg {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+}
+.overllays {
+  transition: 0.3s;
+}
+.conover:hover .overllays {
+  transform: scale(0.95);
+}
+.under {
+  position: absolute;
+  bottom: 10px;
+}
+
+.ll {
+  background-color: saddlebrown;
+}
+.first {
+  transition: 0.5s;
+}
+.first:hover {
+  transform: scale(1.06);
+}
+
+.outmap {
+  background-color: #f6f6f6;
+}
+.incopy {
+  background-color: #f6f6f6;
+}
+.poscard {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #efefef;
+}
+
+.poscard .card-body h3 {
+  color: #0f6285;
+}
+.poscard .card-body h3:hover {
+  color: #15aed8;
+}
+.poscard .card-body {
+  padding-left: 40px !important;
+  padding-top: 40px !important;
+}
+.poscard .card-body h3 {
+  position: relative;
+}
+.poscard .card-body h3::after {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 4px;
+  background-color: #15aed8;
+  left: 3px;
+  bottom: -7px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.poscard .card-body .card-text {
+  line-height: 45px;
+  padding-top: 20px;
+}
+.poscard .card-body .card-text i {
+  font-size: 30px;
+  color: #0f6285;
+  padding: 10px;
+}
+.poscard:hover h3::after {
+  width: 18%;
+}
+.poscard .lpho img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.poscard:hover img {
+  transform: scale(1.1);
+}
+.poscard .lpho {
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.poscard .lef::before {
+  content: " ";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 100px;
+  height: 110%;
+  background-color: #efefef;
+  z-index: 40;
+  transform: rotate(-4deg);
+}
+.poscard .rig::after {
+  content: " ";
+  position: absolute;
+  right: -60px;
+  top: 0;
+  width: 100px;
+  height: 110%;
+  background-color: #efefef;
+  z-index: 40;
+  transform: rotate(4deg);
+}
+
+@media (max-width: 992px) {
+  .poscard .card-body .card-text {
+    padding-top: 0;
+    margin-bottom: 0.5;
+  }
+  .poscard .lef::before {
+    display: none;
+  }
+  .poscard .rig::after {
+    display: none;
+  }
+
+  .poscard .lpho {
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .poscard .partx {
+    order: 2;
+  }
+  .poscard .partpho {
+    order: 1;
+  }
+  .poscard .partpho {
+    max-height: 300px;
+  }
+  .simg {
+    display: none;
+  }
+}
+.social {
+  padding: 60px 0;
+}
+.social .row div {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  padding: 30px 0;
+  max-width: 175px;
+  margin: 20px 0;
+  z-index: 1;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+  text-align: center;
+}
+
+.social .row div::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+
+  width: 0%;
+  height: 0%;
+  background-color: #f6f6f6;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social .row div a {
+  font-size: 75px;
+  position: relative;
+  z-index: 20;
+  transition-delay: 0.3s;
+}
+
+.social .row div:hover {
+  border-radius: 50%;
+}
+.social .row div:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.social .row div:hover a {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+  max-width: 40% !important;
+}
+footer {
+  background-color: #f6f6f6 !important;
+  padding: 20px 0;
+}
+footer .adress {
+  padding: 25px;
+}
+footer .adress p {
+  color: #777;
+}
+
+aside {
+  position: fixed;
+  right: 7px;
+  top: 60%;
+  transform: translate(-7%, -60%);
+  z-index: 1000;
+}
+aside > div {
+  background-color: #e7e7e7;
+  border-radius: 7px;
+}
